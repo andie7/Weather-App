@@ -59,3 +59,11 @@ li {
   margin: 0;
   line-height: 2;
 }
+
+.form-control {
+  margin-top: 20px;
+}
+
+.btn-primary {
+  margin-top: 8px;
+}
