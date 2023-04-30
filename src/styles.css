@@ -61,9 +61,13 @@ li {
 }
 
 .form-control {
-  margin-top: 20px;
+  margin-top: 40px;
+}
+
+.btn-success {
+  margin: 35px 0px 20px;
 }
 
 .btn-primary {
-  margin-top: 8px;
+  margin: -90px 700px -30px;
 }
