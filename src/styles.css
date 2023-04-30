@@ -1,6 +1,6 @@
 h1 {
   color: #5c5757;
-  padding-top: 100px;
+  padding-top: 50px;
 }
 h2 {
   color: #5c5757;
@@ -24,12 +24,6 @@ h3 {
   font-weight: bold;
   font-size: 30px;
 }
-.emoji {
-  display: inline;
-  font-size: 50px;
-  margin: 0;
-  line-height: 2;
-}
 
 .max {
   color: #5c5757;
@@ -45,14 +39,23 @@ h3 {
 button {
   position: relative;
   left: 950px;
-  top: -40px;
+  top: -90px;
   font-size: 30px;
-}
-
-.city {
-  padding-top: 40px;
 }
 
 li {
   list-style: none;
+}
+
+.search-form {
+  margin-top: 80px;
+  position: relative;
+  bottom: -100px;
+}
+
+.emoji {
+  display: inline;
+  font-size: 50px;
+  margin: 0;
+  line-height: 2;
 }
