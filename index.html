@@ -17,122 +17,134 @@
   </head>
   <body>
     <div class="container">
-      <div class="row">
-        <div class="col-6">
+      <div class="weather-wrapper">
+        <div class="weather-app">
           <form id="search-form">
-              <input
-                type="text"
-                id="city-name"
-                class="form-control"
-                placeholder="Enter a city"
-              />
-            <div class="col-3">
-            <input type="submit" class="btn btn-primary" value="Search"/>
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="text"
+                  id="city-name"
+                  class="form-control"
+                  placeholder="Enter a city"
+                />
+              </div>
+              <div class="col-3">
+                <input type="submit" class="btn btn-primary" value="Search" />
+              </div>
             </div>
-             
           </form>
+
+          <h1 id="city"></h1>
+
+          <ul>
+            <li id="date"></li>
+            <li id="description"></li>
+          </ul>
+          <div class="row">
+            <div class="col-6">
+              <img
+                src="https://openweathermap.org/img/wn/10d@2x.png"
+                alt="Clear"
+                id="icon"
+              />
+              <span class="temperature" id="temperature"> </span>
+              <span class="units">
+                <a href="#" id="celsius-link">℃ </a> |
+                <a href="#" id="fahrenheit-link">℉</a>
+              </span>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Humidity: <span id="humidity"></span></li>
+                <li>Wind: <span id="wind"></span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <span class="weekday"> Mon </span>
+
+              <br />
+              <span class="emoji"> ☀ </span>
+
+              <br />
+              <span class="max">19°</span>
+              | <span class="min">13°</span>
+            </div>
+            <div class="col">
+              <span class="weekday"> Tue </span>
+
+              <br />
+              <span class="emoji"> ☀ </span>
+
+              <br />
+              <span class="max">21°</span>
+              | <span class="min">10°</span>
+            </div>
+            <div class="col">
+              <span class="weekday"> Wed </span>
+
+              <br />
+              <span class="emoji"> ☀ </span>
+
+              <br />
+
+              <span class="max">23°</span>
+              | <span class="min">12°</span>
+            </div>
+            <div class="col">
+              <span class="weekday"> Thu </span>
+
+              <br />
+              <span class="emoji"> ☀ </span>
+
+              <br />
+              <span class="max">23°</span>
+              | <span class="min">12°</span>
+            </div>
+            <div class="col">
+              <span class="weekday"> Fri </span>
+
+              <br />
+              <span class="emoji"> ☀ </span>
+
+              <br />
+              <span class="max">24°</span>
+              | <span class="min">13°</span>
+            </div>
+            <div class="col">
+              <span class="weekday"> Sat </span>
+
+              <br />
+              <span class="emoji"> ☀ </span>
+
+              <br />
+              <span class="max">24°</span>
+              | <span class="min">14°</span>
+            </div>
+            <div class="col">
+              <span class="weekday"> Sun </span>
+
+              <br />
+              <span class="emoji"> ☀ </span>
+
+              <br />
+              <span class="max">20°</span>
+              | <span class="min">12°</span>
+            </div>
+          </div>
         </div>
-      </div>
-       </div>
-      <div class ="col-3">
-        <button class="btn btn-success" id="current-location-button">
-
-        Current
-        </button>
-  
-      </div>
-      <h1 id="city"></h1>
-      <h2>
-        <span class="temperature" id="temperature"> </span>
-        <span class="units">
-             <a href="#" id="celsius-link">℃ </a> |
-         <a href="#" id="fahrenheit-link">℉</a>  
-        </span>
-</h2>
-        <br />
-        <span class="emoji">⛅ </span>
-      </h2>
-      <ul>
-        <li id="date"></li>
-    <li id="description"></li>
-        <li>Humidity: <span id ="humidity"></span></li>
-        <li>Wind: <span id ="wind"></span></li>
-      </ul>
-      <div class="row">
-        <div class="col">
-          <span class="weekday"> Sat </span>
-
-          <br />
-          <span class="emoji"> ☀ </span>
-
-          <br />
-          <span class="max">19°</span>
-          | <span class="min">13°</span>
-        </div>
-        <div class="col">
-          <span class="weekday"> Sun </span>
-
-          <br />
-          <span class="emoji"> ☀ </span>
-
-          <br />
-          <span class="max">21°</span>
-          | <span class="min">10°</span>
-        </div>
-        <div class="col">
-          <span class="weekday"> Mon </span>
-
-          <br />
-          <span class="emoji"> ☀ </span>
-
-          <br />
-
-          <span class="max">23°</span>
-          | <span class="min">12°</span>
-        </div>
-        <div class="col">
-          <span class="weekday"> Tue </span>
-
-          <br />
-          <span class="emoji"> ☀ </span>
-
-          <br />
-          <span class="max">23°</span>
-          | <span class="min">12°</span>
-        </div>
-        <div class="col">
-          <span class="weekday"> Wed </span>
-
-          <br />
-          <span class="emoji"> ☀ </span>
-
-          <br />
-          <span class="max">24°</span>
-          | <span class="min">13°</span>
-        </div>
-        <div class="col">
-          <span class="weekday"> Thu </span>
-
-          <br />
-          <span class="emoji"> ☀ </span>
-
-          <br />
-          <span class="max">24°</span>
-          | <span class="min">14°</span>
-        </div>
-        <div class="col">
-          <span class="weekday"> Fri </span>
-
-          <br />
-          <span class="emoji"> ☀ </span>
-
-          <br />
-          <span class="max">20°</span>
-          | <span class="min">12°</span>
-        </div>
+        <small>
+          <a href="https://github.com/andie7/Weather-App" target="blank"
+            >Open-source code</a
+          >
+          by Andreia Fernandes
+        </small>
       </div>
     </div>
-    <a href="https://github.com/andie7/Weather-App">Open-source code</a> by Andreia Fernandes
+
     <script src="src/index.js"></script>
   </body>
 </html>
