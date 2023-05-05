@@ -3,7 +3,13 @@
   margin: 30px auto;
   border: 1px solid;
   border-radius: 5px;
-  background: #00bfe4;
+  background: rgb(157, 212, 232);
+  background: linear-gradient(
+    342deg,
+    rgba(157, 212, 232, 1) 14%,
+    rgba(129, 164, 215, 1) 47%,
+    rgba(246, 177, 219, 1) 93%
+  );
 }
 
 .weather-wrapper {
@@ -80,4 +86,5 @@ li {
 .btn-primary {
   margin: -100px 70px;
   margin-top: -5px;
+  background: grey;
 }
