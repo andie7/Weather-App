@@ -35,11 +35,11 @@
             </div>
           </form>
 
-          <h1 id="city"></h1>
+          <h1 id="city" class="city"></h1>
 
           <ul>
-            <li id="date"></li>
-            <li id="description"></li>
+            <li id="date" class="date"></li>
+            <li id="description" class="description"></li>
           </ul>
           <div class="row">
             <div class="col-6">
@@ -50,14 +50,16 @@
               />
               <span class="temperature" id="temperature"> </span>
               <span class="units">
-                <a href="#" id="celsius-link">℃ </a> |
-                <a href="#" id="fahrenheit-link">℉</a>
+                <a href="#" id="celsius-link" class="cel">℃ </a> |
+                <a href="#" id="fahrenheit-link" class="fah">℉</a>
               </span>
             </div>
             <div class="col-6">
               <ul>
-                <li>Humidity: <span id="humidity"></span></li>
-                <li>Wind: <span id="wind"></span></li>
+                <li class="humidity">
+                  Humidity: <span id="humidity" class="humidity"></span>
+                </li>
+                <li class="wind">Wind: <span id="wind" class="wind"></span></li>
               </ul>
             </div>
           </div>

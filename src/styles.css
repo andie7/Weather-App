@@ -13,7 +13,7 @@
 }
 
 .weather-wrapper {
-  max-width: 700px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -86,5 +86,53 @@ li {
 .btn-primary {
   margin: -100px 70px;
   margin-top: -5px;
-  background: grey;
+  color: white;
+  background: #c3abd9;
+  border: 1px #81a4d7;
+  font-size: 20px;
+}
+
+.temperature {
+  font-size: 50px;
+  color: white;
+}
+
+.city {
+  color: white;
+}
+
+.weekday {
+  color: white;
+}
+
+.max {
+  color: white;
+}
+
+.min {
+  color: white;
+}
+
+.date {
+  color: white;
+}
+
+.description {
+  color: white;
+}
+
+.humidity {
+  color: white;
+}
+
+.wind {
+  color: white;
+}
+
+.cel {
+  color: white;
+}
+
+.fah {
+  color: white;
 }
