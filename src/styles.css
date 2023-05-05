@@ -3,17 +3,16 @@
   margin: 30px auto;
   border: 1px solid;
   border-radius: 5px;
-  background: rgb(157, 212, 232);
+  background: rgb(34, 193, 195);
   background: linear-gradient(
-    342deg,
-    rgba(157, 212, 232, 1) 14%,
-    rgba(129, 164, 215, 1) 47%,
-    rgba(246, 177, 219, 1) 93%
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
   );
 }
 
 .weather-wrapper {
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -55,15 +54,14 @@ h3 {
   font-size: 30px;
 }
 
-button {
-  position: relative;
-  left: 950px;
-  top: -90px;
-  font-size: 30px;
+ul {
+  margin: 0;
+  padding: 0;
 }
-
 li {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .search-form {
@@ -87,7 +85,7 @@ li {
   margin: -100px 70px;
   margin-top: -5px;
   color: white;
-  background: #c3abd9;
+  background: #f8da5b;
   border: 1px #81a4d7;
   font-size: 20px;
 }
@@ -103,22 +101,27 @@ li {
 
 .weekday {
   color: white;
+  font-size: 23px;
 }
 
 .max {
   color: white;
+  font-size: 23px;
 }
 
 .min {
   color: white;
+  font-size: 23px;
 }
 
 .date {
   color: white;
+  font-size: 23px;
 }
 
 .description {
   color: white;
+  font-size: 23px;
 }
 
 .humidity {
@@ -135,4 +138,15 @@ li {
 
 .fah {
   color: white;
+}
+
+button {
+  border: none;
+  border-radius: 30px;
+  background: rgb(34, 164, 195);
+  background: linear-gradient(
+    180deg,
+    rgba(34, 164, 195, 1) 0%,
+    rgba(253, 237, 45, 1) 100%
+  );
 }
