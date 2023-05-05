@@ -29,12 +29,42 @@ function formatDate(date) {
   return `${day} ${hours} : ${minutes}`;
 }
 
+function formatDate(date) {
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+
+  let day = days[date.getDay()];
+  console.log(day);
+
+  let hours = date.getHours();
+  console.log(hours);
+
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+
+  let minutes = date.getMinutes();
+  console.log(minutes);
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  return `${day} ${hours} : ${minutes}`;
+}
+
 function displayWeatherCondition(response) {
-  console.log(response.data);
+  celsiusTemperature = response.data.main.temp;
   document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
+  document.querySelector("#temperature").innerHTML =
+    Math.round(celsiusTemperature);
 
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
@@ -42,12 +72,6 @@ function displayWeatherCondition(response) {
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
-  document
-    .querySelector("#icon")
-    .setAttribute(
-      "src",
-      `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-    );
 }
 
 function searchCity(city) {
@@ -80,15 +104,29 @@ function getCurrentLocation(event) {
 function ConvertToFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 66;
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+
+  let fahrenheiTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
 }
 
 function ConvertToCelsius(event) {
   event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = 19;
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
+let celsiusTemperature = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", ConvertToFahrenheit);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", ConvertToCelsius);
 //1
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
@@ -104,10 +142,14 @@ searchCity("New York");
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-//3
+//function searchLocation(position) {
+//let apiKey = "96771e971243152d6b8948878c26adde";
+//let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
+//console.log(apiUrl);
+//axios.get(apiUrl).then(displayWeatherCondition);
+//}
 
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", ConvertToFahrenheit);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", ConvertToCelsius);
+//function getCurrentLocation(event) {
+//// event.preventDefault();
+//navigator.geolocation.getCurrentPosition(searchLocation);
+//}

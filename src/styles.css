@@ -2,7 +2,7 @@
   padding: 20px;
   margin: 30px auto;
   border: 1px solid;
-  border-radius: 5px;
+  border-radius: 20px;
   background: rgb(127, 206, 180);
   background: linear-gradient(
     342deg,
@@ -141,11 +141,15 @@ li {
 .cel {
   color: white;
   font-size: 24px;
+  cursor: default;
+  text-decoration: none;
 }
 
 .fah {
   color: white;
   font-size: 24px;
+  cursor: default;
+  text-decoration: none;
 }
 
 button {
