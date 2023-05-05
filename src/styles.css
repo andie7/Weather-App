@@ -3,16 +3,17 @@
   margin: 30px auto;
   border: 1px solid;
   border-radius: 5px;
-  background: rgb(34, 193, 195);
+  background: rgb(127, 206, 180);
   background: linear-gradient(
-    0deg,
-    rgba(34, 193, 195, 1) 0%,
-    rgba(253, 187, 45, 1) 100%
+    342deg,
+    rgba(127, 206, 180, 1) 10%,
+    rgba(122, 187, 198, 1) 59%,
+    rgba(121, 181, 203, 1) 83%
   );
 }
 
 .weather-wrapper {
-  max-width: 800px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -82,7 +83,7 @@ li {
 }
 
 .btn-primary {
-  margin: -100px 70px;
+  margin: -100px 20px;
   margin-top: -5px;
   color: white;
   background: #f8da5b;
@@ -93,6 +94,7 @@ li {
 .temperature {
   font-size: 50px;
   color: white;
+  text-align: center;
 }
 
 .city {
@@ -101,12 +103,12 @@ li {
 
 .weekday {
   color: white;
-  font-size: 23px;
+  font-size: 20px;
 }
 
 .max {
   color: white;
-  font-size: 23px;
+  font-size: 20px;
 }
 
 .min {
@@ -126,27 +128,35 @@ li {
 
 .humidity {
   color: white;
+  font-size: 24px;
+  text-align: center;
 }
 
 .wind {
   color: white;
+  font-size: 24px;
+  text-align: center;
 }
 
 .cel {
   color: white;
+  font-size: 24px;
 }
 
 .fah {
   color: white;
+  font-size: 24px;
 }
 
 button {
+  margin: -4px;
   border: none;
   border-radius: 30px;
-  background: rgb(34, 164, 195);
-  background: linear-gradient(
-    180deg,
-    rgba(34, 164, 195, 1) 0%,
-    rgba(253, 237, 45, 1) 100%
+  background: rgb(127, 206, 180);
+  background: radial-gradient(
+    circle,
+    rgba(127, 206, 180, 1) 10%,
+    rgba(122, 187, 198, 1) 59%,
+    rgba(121, 181, 203, 1) 83%
   );
 }
