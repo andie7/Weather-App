@@ -62,18 +62,19 @@ function formatDate(date) {
 
 function displayForecast() {
   let forecastElement = document.querySelector("#forecast");
-  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
+  days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
   let forecastHTML = `<div class="row">`;
 
-  days.forEach(function (day) {
+  days.forEach(function (days) {
     forecastHTML =
       forecastHTML +
       `
     
               <div class="col">
                 <button>
-                  <span class="weekday">${day} </span>
+                  <span class="weekday">${days} </span>
 
                   <br />
                   <img
