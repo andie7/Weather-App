@@ -57,7 +57,7 @@ function formatDate(date) {
     minutes = `0${minutes}`;
   }
 
-  return `${day} ${hours} : ${minutes}`;
+  return `${day} ${hours}:${minutes}h`;
 }
 
 function formatDay(timestamp) {
@@ -110,7 +110,7 @@ function displayForecast(response) {
 
 function getForecast(coordinates) {
   console.log(coordinates);
-  let apiKey = "7ed26a6948c661d05fafe7355b41b2ec";
+  let apiKey = "96771e971243152d6b8948878c26adde";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   console.log(apiUrl);
   axios.get(apiUrl).then(displayForecast);
@@ -143,7 +143,7 @@ function searchCity(city) {
 function handleSubmit(event) {
   event.preventDefault();
 
-  let city = document.querySelector("#city-name").value;
+  let city = document.querySelector("#city-input").value;
   searchCity(city);
 }
 
@@ -211,5 +211,3 @@ searchCity("New York");
 //// event.preventDefault();
 //navigator.geolocation.getCurrentPosition(searchLocation);
 //}
-
-displayForecast();
