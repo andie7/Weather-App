@@ -153,7 +153,7 @@ li {
 }
 
 button {
-  margin: -4px;
+  margin: -10px;
   border: none;
   border-radius: 30px;
   background: rgb(127, 206, 180);
@@ -163,4 +163,9 @@ button {
     rgba(122, 187, 198, 1) 59%,
     rgba(121, 181, 203, 1) 83%
   );
+}
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: center;
 }

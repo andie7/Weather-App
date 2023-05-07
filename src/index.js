@@ -60,6 +60,42 @@ function formatDate(date) {
   return `${day} ${hours} : ${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
+  let forecastHTML = `<div class="row">`;
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    
+              <div class="col">
+                <button>
+                  <span class="weekday">${day} </span>
+
+                  <br />
+                  <img
+                    src="https://openweathermap.org/img/wn/10d@2x.png"
+                    alt=""
+                    id="icon"
+                    class="emoji"
+                    width="74"
+                  />
+
+                  <br />
+                  <span class="max">19°</span>
+                  <span class="min">|13°</span>
+                </button>
+              </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
+}
+
 function displayWeatherCondition(response) {
   celsiusTemperature = response.data.main.temp;
   document.querySelector("#city").innerHTML = response.data.name;
@@ -139,8 +175,8 @@ searchForm.addEventListener("submit", handleSubmit);
 
 searchCity("New York");
 
-let currentLocationButton = document.querySelector("#current-location-button");
-currentLocationButton.addEventListener("click", getCurrentLocation);
+//let currentLocationButton = document.querySelector("#current-location-button");
+//currentLocationButton.addEventListener("click", getCurrentLocation);
 
 //function searchLocation(position) {
 //let apiKey = "96771e971243152d6b8948878c26adde";
@@ -153,3 +189,5 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 //// event.preventDefault();
 //navigator.geolocation.getCurrentPosition(searchLocation);
 //}
+
+displayForecast();
