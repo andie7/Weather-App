@@ -1,7 +1,8 @@
 .weather-app {
   padding: 20px;
+
   margin: 30px auto;
-  border: 1px solid;
+  border: none;
   border-radius: 20px;
   background: rgb(127, 206, 180);
   background: linear-gradient(
@@ -13,7 +14,7 @@
 }
 
 .weather-wrapper {
-  max-width: 700px;
+  max-width: 750px;
   margin: 0 auto;
 }
 
@@ -83,13 +84,14 @@ li {
   margin-top: 40px;
 }
 
-.btn-primary {
-  margin: -100px 20px;
-  margin-top: -5px;
+.search-button {
+  margin-top: 40px;
   color: white;
   background: #f8da5b;
   border: 1px #81a4d7;
   font-size: 20px;
+  border-radius: 20px;
+  padding: 5px 20px;
 }
 
 .temperature {
@@ -186,4 +188,52 @@ button {
 body {
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+small {
+  color: darkorange;
+}
+
+@media (max-width: 576px) {
+  .form-control {
+    font-size: 12px;
+    width: 100%;
+  }
+
+  .search-button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  .city {
+    font-size: 24px;
+  }
+
+  .date,
+  .description {
+    font-size: 22px;
+  }
+
+  .humidity,
+  .wind {
+    font-size: 20px;
+  }
+
+  .temperature {
+    font-size: 30px;
+  }
+
+  .cel,
+  .fah {
+    font-size: 18px;
+  }
+
+  .forecast-icons {
+    width: 45px;
+    height: 45px;
+  }
+
+  #forecast {
+  }
 }

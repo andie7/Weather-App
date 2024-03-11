@@ -81,7 +81,7 @@ function displayForecast(response) {
         `
     
               <div class="col">
-                <button>
+                
                   <span class="weekday">${formatDay(forecastDay.dt)} </span>
 
                   <br />
@@ -98,7 +98,7 @@ function displayForecast(response) {
                   <br />
                   <span class="max">${Math.round(forecastDay.temp.max)}°</span>
                   <span class="min">|${Math.round(forecastDay.temp.min)}°</span>
-                </button>
+                
               </div>`;
     }
   });
