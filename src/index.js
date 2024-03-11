@@ -211,3 +211,33 @@ searchCity("New York");
 //// event.preventDefault();
 //navigator.geolocation.getCurrentPosition(searchLocation);
 //}
+
+// Array of background images
+const backgroundImages = [
+  'url("https://i.pinimg.com/originals/9f/72/a4/9f72a4881c7f3791da3dadf12e218efb.gif")', //Rain
+  'url("https://i.pinimg.com/originals/44/04/dc/4404dce13bf2de288cdf1295a9f14193.gif")', //Summer
+  `url("https://i.pinimg.com/originals/95/d0/6e/95d06ee0ac5a1bbc810ae3994dc85b81.gif")`, //Fall
+  `url("https://i.pinimg.com/originals/0d/ba/94/0dba94affef18fa90961488c4b4b4ef0.gif")`, //Winter
+  `url("https://i.pinimg.com/originals/bb/33/98/bb33987c254c892ba6ab782efbd36c2f.gif")`, //Night
+  `url("https://i.pinimg.com/originals/80/6e/5d/806e5dd8757cff9244f4722c6819cabe.gif")`, //Sunrise
+  `url("https://i.pinimg.com/originals/d7/e7/81/d7e781b32269a8a82b500c1a9dc97733.gif")`, //clouds
+  `url("https://i.pinimg.com/originals/c1/60/bb/c160bb331501d365626751acd3bc58e3.gif")`, //sunset
+  `url("https://i.pinimg.com/originals/bf/2e/d4/bf2ed44164f5363cf5b29ddd7dd2c5dd.gif")`, //forest
+  `url("https://i.pinimg.com/originals/c5/cf/c9/c5cfc94d993a898f0ba3a147f3d74d40.gif")`, //Christmas
+  `url("https://i.pinimg.com/originals/42/86/96/4286968ba3c6e3f7777b801d26253d2d.gif")`, //earth
+  'url("https://static.wixstatic.com/media/11f74e_8999eb8ba41f489aa787396cb507d05d~mv2_d_1900_1277_s_2.gif/v1/fill/w_1600,h_1075,al_c,q_90/file.jpg")', //summer
+];
+
+let currentIndex = 0;
+// Function to change the background image
+function changeBackground(event) {
+  document.body.style.backgroundImage = backgroundImages[currentIndex];
+
+  // Increment the index or reset to 0 when reaching the end
+  currentIndex = (currentIndex + 1) % backgroundImages.length;
+}
+
+// Event listener for the "Change Theme" button
+document
+  .getElementById("changeButton")
+  .addEventListener("click", changeBackground);

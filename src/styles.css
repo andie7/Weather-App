@@ -172,3 +172,18 @@ button {
   margin-top: 20px;
   text-align: center;
 }
+
+.changeButton {
+  border: 1px solid;
+  width: auto;
+  color: white;
+  background-color: #f8da5b;
+  height: 30px;
+  display: block;
+  margin: 0 auto;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
